@@ -14,7 +14,7 @@ Hera uses shard key column bind name and value to determine how to direct the qu
 * Hera server adds scuttle_id column and values to help with query execution
 
 # Scenario: Migrating existing application
-1. Hera turns on whitelist with 3 shards.  DBAs create shard map table. This turns on CAL sharding events when there are transactions across shards or queries with missing shard key.
+1. Hera turns on whitelist with 3 shards.  DBAs create shard map table.
 1. Application fixes commit across shards and queries with missing shard key
 1. DBAs and Application write SQL scripts to migrate data
 1. Test user logical whitelist.  Moving the data to a logical shard DB helps identify if there are issues.  A small number of test users are used to reduce impact of any bug that might occur with application data access pattern.
